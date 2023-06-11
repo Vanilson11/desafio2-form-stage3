@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avalie sua mentoria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page" class="column">
+    <header class="column">
+      <div class="textos column">
+        <h1>Avalie sua mentoria</h1>
+        <p>Chegou a hora de avaliar sua mentoria. Bora lá?</p>
+      </div>
+
+      <div class="avaliacao flex">
+        <div class="poup flex">
+          <img src="img/poup.svg" alt="Desenho de uma nuvem de cor rosa com estrelas de cor branca alinhadas uma ao lado da outra no centro da nuvem">
+
+          <div class="stars">
+            <img class="estrelinha" src="img/star.svg" alt="Desenho de uma estrela">
+            <img class="estrelinha" src="img/star.svg" alt="Desenho de uma estrela">
+            <img class="estrelinha" src="img/star.svg" alt="Desenho de uma estrela">
+            <img class="estrelinha" src="img/star.svg" alt="Desenho de uma estrela">
+            <img class="estrelinha" src="img/star.svg" alt="Desenho de uma estrela">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <form id="form-avaliacao" class="column">
+        <fieldset>
+          <div class="legenda" id="cabecalho-form">
+            <h2>Informações pessoais</h2>
+          </div>
+
+          <div class="campos column">
+            <div class="nome-sobrenome flex">
+              <div class="campos-input column">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required />
+              </div>
+
+              <div class="campos-input column">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" required />
+              </div>
+            </div>
+
+            <div class="campos-input column">
+              <label for="email">E-mail <span>(digite um email válido)</span></label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="legenda2">
+            <h2 class="texto-legenda2">Informações do mentor</h2>
+          </div>
+
+          <div class="campos column">
+            <div class="selecionar-instrutor column">
+              <label for="instrutor">Selecione quem foi seu mentor</label>
+              <select name="instrutor" id="instrutor" required>
+                <option value="Myke Brito">Myke Brito</option>
+                <option value="Rodrigo">Rodrigo Gonçalves</option>
+                <option value="Diego">Diego Fernandes</option>
+              </select>
+            </div>
+
+            <div class="area-texto column">
+              <label for="sobre-mentor">Fale sobre o mentor</label>
+              <textarea name="sobre-mentor" id="sobre-mentor" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="check-wrapper flex">
+              <input type="checkbox" name="check" id="check">
+              <label for="check">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <div class="legenda2">
+            <h2 class="texto-legenda2">Agendando próxima mentoria</h2>
+          </div>
+
+          <div class="campos column">
+            <div class="campos-input column">
+              <div class="input-data-hora flex">
+                <div class="input-data">
+                  <label for="data">Data <span>(DD/MM/AAAA)</span></label>
+                  <input type="date" name="data" id="data">
+                </div>
+
+                <div class="input-hora__inicio">
+                  <label for="hora-inicio">Das</label>
+                  <input type="time" name="hora-inicio" id="hora-inicio">
+                </div>
+
+                <div class="input-hora__fim">
+                  <label for="hora-fim">Até</label>
+                  <input type="time" name="hora-fim" id="hora-fim">
+                </div>
+              </div>
+            </div>
+            <input class="button" type="submit" value="Salvar" form="form-avaliacao">
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
